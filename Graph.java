@@ -40,6 +40,7 @@ class Graph {
 
         System.out.println("Following is Depth First Traversal");
 
-        g.DFS(2);
+        g.DFS(1);
+        //новые комментарии
     }
 }
