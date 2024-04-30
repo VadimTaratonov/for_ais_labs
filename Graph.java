@@ -11,7 +11,7 @@ class Graph {
         visited = new boolean[vertices];
 
         for (int i = 0; i < vertices; i++)
-            adjLists[i] = new LinkedList<Integer>();
+            adjLists[i] = new LinkedList<>();
     }
 
     // Добавление ребер
@@ -24,9 +24,7 @@ class Graph {
         visited[vertex] = true;
         System.out.print(vertex + " ");
 
-        Iterator<Integer> ite = adjLists[vertex].listIterator();
-        while (ite.hasNext()) {
-            int adj = ite.next();
+        for (int adj : adjLists[vertex]) {
             if (!visited[adj])
                 DFS(adj);
         }
